@@ -3,40 +3,52 @@ import Message from './message/Message'
 import MessageSender from './message-sender/MessageSender'
 import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
-import avatar from './avatar.png'
-
+import avatarAlex from './img/avatar-alex.png'
+import avatarFriend from './img/girl-avatar.png'
 /*
-* 1 - описать тип MessageType
-* 2 - описать тип MessagePropsType в файле Message.tsx
-* 3 - в файле Message.tsx отобразить приходящие данные
-* 4 - выполнить пункты 2, 3 в файле FriendMessage.tsx
+* 1 - описать тип MessageType +
+* 2 - описать тип MessagePropsType в файле Message.tsx +
+* 3 - в файле Message.tsx отобразить приходящие данные +
+* 4 - выполнить пункты 2, 3 в файле FriendMessage.tsx +
 * 5 - сделать стили в соответствии с дизайном
 * */
 
 // нужно создать правильный тип вместо any
-export type MessageType = any
+export type MessageType = {
+    id: number
+    user: UserType
+    message: MessageContentType
+}
+type UserType = {
+    avatar: string
+    name: string
+}
+type MessageContentType = {
+    text: string
+    time: string
+}
 
 // структуру объекта не менять
 export const message0: MessageType = {
     id: 0,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Some Name',  // можно менять
+        avatar: avatarAlex, // можно менять
+        name: 'Alex',  // можно менять
     },
     message: {
-        text: 'some textsome textsome textsome textsome textsome textsome text', // можно менять
-        time: '22:00', // можно менять
+        text: 'Привіт Нікуся! Як сьогодні в школі?', // можно менять
+        time: '15:00', // можно менять
     },
 }
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        avatar: avatarFriend, // можно менять
+        name: 'Nika', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
-        time: '22:00', // можно менять
+        text: 'Привіт тату. Все ок', // можно менять
+        time: '22:05', // можно менять
     },
 }
 
@@ -48,11 +60,11 @@ const HW1 = () => {
                 {/*проверка отображения (не менять)*/}
                 <div>
                     <Message message={message0} />
-                    <FriendMessage message={friendMessage0} />
+                    {/*<FriendMessage message={friendMessage0} />*/}
                 </div>
 
                 {/*для автоматической проверки дз (не менять)*/}
-                <MessageSender M={Message} />
+                {/*<MessageSender M={Message} />*/}
             </div>
         </div>
     )
