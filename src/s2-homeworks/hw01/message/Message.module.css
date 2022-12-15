@@ -21,7 +21,6 @@
     width: 48px;
     height: 48px;
     margin-left: 15px;
-    border: 1px solid #6a70e8;
 }
 
 .text {
@@ -30,6 +29,8 @@
     border-radius: 5px;
 
 }
+
+/*angle for dialog*/
 
 .text:after {
     content: '';
