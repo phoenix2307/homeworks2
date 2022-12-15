@@ -16,12 +16,20 @@
 }
 
 .friendText {
+    position: relative;
     background: #F5F7FB;
     border-radius: 5px;
 }
 
 .friendText:after {
-
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: -10px;
+    bottom: 0;
+    border: 12px solid;
+    border-color: transparent #F5F7FB #F5F7FB transparent;
 }
 
 .friendName {

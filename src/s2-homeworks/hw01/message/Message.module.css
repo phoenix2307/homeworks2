@@ -25,12 +25,21 @@
 }
 
 .text {
+    position: relative;
     background-color: #0066CC;
     border-radius: 5px;
 
 }
 
 .text:after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: -10px;
+    bottom: 0;
+    border: 12px solid;
+    border-color: transparent transparent #0066CC #0066CC;
 
 }
 
