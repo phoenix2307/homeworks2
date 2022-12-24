@@ -3,6 +3,7 @@
 
 .inputAndButtonContainer {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .error {
@@ -22,16 +23,19 @@
     border-radius: 5px;
     margin-right: 12px;
 
-
-
 }
 
 .input:focus {
 }
 
 .errorInput {
+    display: flex;
+    flex-direction: column;
+    min-width: 372px;
+    min-height: 36px;
     border: 1px solid #CC0000;
     border-radius: 5px;
+    margin-right: 12px;
 }
 
 .button {
