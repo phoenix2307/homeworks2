@@ -12,11 +12,12 @@ export const pureAddUser = (name: string,
                             setName: React.Dispatch<string>,
                             addUserCallback: (name: string) => void) => {
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
-    if (name.trim() === '') {
-        setError('Ошибка! Введите имя!')
-    } else {
+    if (name.trim() !== '') {
         addUserCallback(name)
         setName('')
+
+    } else {
+        setError('Ошибка! Введите имя!')
     }
 }
 
@@ -62,9 +63,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const totalUsers = users.length// need to fix
-    // const lastUserName = name // need to fix
-    const setLastUserName = (name: string, error: string) => !error ? name : undefined
-    const lastUserName = setLastUserName(name, error) // need to fix
+    const lastUserName = name // need to fix
 
 
     return (
