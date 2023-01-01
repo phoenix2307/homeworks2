@@ -12,12 +12,11 @@ export const pureAddUser = (name: string,
                             setName: React.Dispatch<string>,
                             addUserCallback: (name: string) => void) => {
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
-    if (name.trim() !== '') {
+    if (name.trim() === '') {
+        setError('Ошибка! Введите имя!')
+    } else {
         addUserCallback(name)
         setName('')
-
-    } else {
-        setError('Ошибка! Введите имя!')
     }
 }
 
