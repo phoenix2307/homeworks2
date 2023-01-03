@@ -1,16 +1,35 @@
 .sidebar {
+    display: none;
 }
 
 .sidebar.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 23px;
+    background-color: #ffffff;
+    /*min-height: 100vh;*/
+    /*width: 317px;*/
 }
 
 .background {
 }
 
 .nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    gap: 45px;
+
 }
 
 .nav a {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+
+    text-decoration: none;
+    color: black;
 }
 
 .nav a:hover {
@@ -18,8 +37,14 @@
 
 .nav a.active {
 }
+
 .close {
+    width: 24px;
+    height: 24px;
+    /*outline: none;*/
 }
 
 .close img {
+    width: 12px;
+    height: 12px;
 }

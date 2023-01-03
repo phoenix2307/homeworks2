@@ -42,7 +42,7 @@
     width: 78px;
     height: 36px;
     background: #0066CC;
-    opacity: 0.5;
+
     border-radius: 3px;
     font-weight: 600;
     font-size: 14px;
@@ -53,7 +53,14 @@
 .button:focus {
 }
 
+.button:hover {
+    opacity: 0.85;
+}
+
 .button:active {
+    background: #0054af;
+    opacity: unset;
+
 }
 
 .button:disabled {
