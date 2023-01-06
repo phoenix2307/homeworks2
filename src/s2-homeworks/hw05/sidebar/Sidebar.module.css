@@ -11,18 +11,25 @@
     background-color: #ffffff;
     min-height: 100vh;
     width: 317px;
-    z-index: 2;
+    z-index: 3;
+    padding-top: 16px;
+    padding-right: 24px;
+    align-items: flex-end;
 }
 
 .background {
+    position: absolute;
     background: #000000;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
     opacity: 0.3;
 }
 
 .nav {
     display: flex;
     flex-direction: column;
-    padding-left: 70px;
+    padding-right: 126px;
     gap: 45px;
 
 }
@@ -31,25 +38,31 @@
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
-
     text-decoration: none;
     color: black;
 }
 
 .nav a:hover {
+    color: #58ACFF;
 }
 
 .nav a.active {
-
+    color: #3D6B99;
 }
 
 .close {
     width: 24px;
     height: 24px;
-    /*outline: none;*/
+    border: 0;
+    background-color: transparent
+}
+
+.close:hover {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg) scale(1.2);
 }
 
 .close img {
-    width: 12px;
-    height: 12px;
+    width: 24px;
+    height: 24px;
 }
