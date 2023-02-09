@@ -2,10 +2,19 @@
 }
 
 .span {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #0080FF;
 }
 
 .input {
+    /*background-color: #cc9c00;*/
 }
 
 .pen {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
