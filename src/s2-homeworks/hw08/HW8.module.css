@@ -8,9 +8,17 @@
 }
 
 .buttonsContainer {
+    width: 606px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 12px;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .thead {
