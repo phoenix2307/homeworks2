@@ -1,4 +1,17 @@
 .select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    padding-left: 10px;
+    width: 165px;
+    height: 24px;
+    border: 1px solid #C2C2C2;
+    border-radius: 2px;
+    /*arrow*/
+    background-image: url("../c5-SuperSelect/chevron-down.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+
 }
 
 .select:focus {
@@ -6,4 +19,9 @@
 
 
 .option:hover {
+    background-color: #FFFFFF;
+    color: #0066CC;
 }
+
+
+
