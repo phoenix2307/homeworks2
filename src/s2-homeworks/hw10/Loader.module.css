@@ -1,3 +1,28 @@
 .loader {
-    /*свг и/или анимация*/
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: conic-gradient(#512DE4, #8A2BE2, transparent);
+    animation: spin 1s linear infinite;
+}
+.loader::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: white; /* Вирізання центру */
+    border-radius: 50%;
+}
+
+/* Анімація обертання */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Початкове обертання */
+    }
+    100% {
+        transform: rotate(360deg); /* Обертання на 360° */
+    }
 }
