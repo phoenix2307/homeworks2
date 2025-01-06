@@ -28,7 +28,6 @@ const SuperRange: React.FC<SliderProps> = (props) => {
                     borderRadius: 10,
                     color: 'black'
                 },
-
             }}
             {...props} // отдаём слайдеру пропсы если они есть (value например там внутри)
         />
