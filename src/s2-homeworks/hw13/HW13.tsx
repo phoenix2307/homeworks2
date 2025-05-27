@@ -9,8 +9,8 @@ import error500 from './images/500.svg'
 import errorUnknown from './images/error.svg'
 
 /*
-* 1 - дописать функцию send
-* 2 - дизэйблить кнопки пока идёт запрос
+* 1 - дописать функцию send +
+* 2 - дизэйблить кнопки пока идёт запрос +
 * 3 - сделать стили в соответствии с дизайном
 * */
 
@@ -34,7 +34,6 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
-                console.log(res)
                 setCode('Код 200!')
                 setImage(success200)
                 setText(res.data.errorText)
@@ -43,13 +42,11 @@ const HW13 = () => {
             })
             .catch((e) => {
                 if (e.response.status === 500) {
-                    console.log(e.response.data)
                     setCode('Ошибка 500!')
                     setImage(error500)
                     setText(e.response.data.errorText)
                     setInfo(e.response.data.info)
                 } else if (e.response.status === 400) {
-                    console.log(e.response.data)
                     setCode('Ошибка 400!')
                     setImage(error400)
                     setText(e.response.data.errorText)
