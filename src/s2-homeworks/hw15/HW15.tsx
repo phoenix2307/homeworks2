@@ -9,9 +9,9 @@ import SuperSort from './common/c10-SuperSort/SuperSort'
 /*
 * 1 - дописать SuperPagination +
 * 2 - дописать SuperSort +
-* 3 - проверить pureChange тестами
+* 3 - проверить pureChange тестами +
 * 3 - дописать sendQuery, onChangePagination, onChangeSort в HW15 +
-* 4 - сделать стили в соответствии с дизайном
+* 4 - сделать стили в соответствии с дизайном +
 * 5 - добавить HW15 в HW5/pages/JuniorPlus +
 * */
 
