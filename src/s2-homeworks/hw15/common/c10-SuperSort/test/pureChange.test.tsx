@@ -17,3 +17,13 @@ test('sort "1b"', () => {
     const newSort = pureChange('1b', '1a', '0a')
     expect(newSort).toBe('1a')
 })
+test('pureChange cycle', () => {
+    const value = 'tech'
+    const down = '1tech'
+    const up = '0tech'
+
+    expect(pureChange('', down, up)).toBe(down)
+    expect(pureChange(down, down, up)).toBe(up)
+    expect(pureChange(up, down, up)).toBe('')
+    expect(pureChange('something-else', down, up)).toBe(down)
+})
