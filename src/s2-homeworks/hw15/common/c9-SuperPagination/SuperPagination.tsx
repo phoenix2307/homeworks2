@@ -35,8 +35,14 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             <Pagination
                 id={id + '-pagination'}
                 sx={{
-                    button: {color: '#1976d2'},
-                    '.Mui-selected': {backgroundColor: '#1976d2', color: 'white'}
+                    // button: {color: '#1976d2'},
+                    '& .MuiPaginationItem-root': {
+                        width: 24,
+                        height: 24,
+                        borderRadius: 0, // Робимо квадратними
+                        border: '1px solid #ddd', // Додаємо рамку (опціонально)
+                    },
+                    '& .Mui-selected': {backgroundColor: '#1976d2', color: 'white'}
                     // стили для Pagination // пишет студент
                 }}
                 page={page}
@@ -47,7 +53,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             />
 
             <span className={s.text1}>
-                показать
+                Показать
             </span>
 
             <SuperSelect
